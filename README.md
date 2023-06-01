@@ -2,7 +2,7 @@
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
-
+* [Video Recording](#video-recording)
 * [Getting Started](#getting-started)
     * [Prerequisites](#prerequisites)
     * [Installation Steps](#installation-steps)
@@ -13,6 +13,9 @@
     * [Task - Migrate Questions to MongoDB for IWTSC](#task---migrate-questions-to-mongodb-for-iwtsc)
     * [Task - Embed ALQ website into IWTSC](#task---embed-alq-website-into-iwtsc)
 * [Evaluation](#evaluation)
+
+## Video Recording
+https://youtu.be/dLUGomkTWY0
 
 <!-- GETTING STARTED -->
 ## Getting Started
