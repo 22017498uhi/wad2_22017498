@@ -39,6 +39,16 @@ Navigate to the project directory.
 $ cd wad2_22017498
 ```
 
+## WINDOWS ONLY
+If you are running this on windows platform, then extra step needs to be performed.
+Open project "wad2_22017498" in VS code.
+Open all three ```startup.sh``` files from this project. Path is shown below.
+![statupsh files](https://github.com/22017498uhi/wad2_22017498/assets/113307467/ae88340c-4131-437c-ae1e-c59593b75b1a)
+
+Change their end of line formating to "**LF**" instead of "CLRF" as shown below. It is there on bottom right corner of VS code.
+
+![change to LF](https://github.com/22017498uhi/wad2_22017498/assets/113307467/c3e9fd44-4f8a-447a-9e8c-95120b2b196c)
+
 **Build and start AQC website**
 
 Navigate to *aqc* directory.
