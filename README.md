@@ -39,7 +39,7 @@ Navigate to the project directory.
 $ cd wad2_22017498
 ```
 
-## WINDOWS ONLY
+#### WINDOWS ONLY
 If you are running this on windows platform, then extra step needs to be performed.
 Open project "wad2_22017498" in VS code.
 Open all three ```startup.sh``` files from this project. Path is shown below.
@@ -48,6 +48,11 @@ Open all three ```startup.sh``` files from this project. Path is shown below.
 Change their end of line formating to "**LF**" instead of "CLRF" as shown below. It is there on bottom right corner of VS code.
 
 ![change to LF](https://github.com/22017498uhi/wad2_22017498/assets/113307467/c3e9fd44-4f8a-447a-9e8c-95120b2b196c)
+
+Windows only stuff ends here. Follow below steps for all platforms.
+
+---
+
 
 **Build and start AQC website**
 
@@ -65,6 +70,7 @@ Now run the container based on above image.
 ```sh
 docker run -ti -d --name aqc1  -p 4000:4000 -p 4040:4040  aqc
 ```
+
 
 **Build and start IWTSC website**
 
@@ -119,7 +125,7 @@ Approach here is to split the website into below three containers.
 - Server
 - Database - PostgreSQL
 
-**Note:** All the activities below are done from a blank directory "wad2_22017498".
+> **Note:** All the activities below are done from a blank directory "wad2_22017498".
 
 For this task, "iwtsc" directory is created.
 
@@ -195,7 +201,7 @@ Also, under ```NavBar.js``` component, removed disable styling for this link as 
 
 ![nav link question list](https://github.com/22017498uhi/wad2_22017498/assets/113307467/f7af9b05-9f94-4649-a681-f0c0e9602c65)
 
-**Note:** IWTSC website url needs to be added as CORS options in **server.js** of ALQ container, otherwise, no third-party websites can access data due to CORS policy. This is shown below.
+>  **Note:** IWTSC website url needs to be added as CORS options in **server.js** of ALQ container, otherwise, no third-party websites can access data due to CORS policy. This is shown below.
 
 ![cors alq](https://github.com/22017498uhi/wad2_22017498/assets/113307467/ede1ab83-d20b-4288-8d3a-65db7cc337f7)
 
