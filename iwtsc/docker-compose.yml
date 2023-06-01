@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+
+  iwtsc-postgres:
+    image: "postgres:9.6-alpine"
+    container_name: iwtsc-postgres
+    volumes:
+      - iwtsc-postgres-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=testdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  iwtsc-mongo:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - iwtsc-mongo-data:/data/db
+
+  iwtsc-server:
+    build: ./server
+    container_name: iwtsc-server
+    environment:
+      - DB_POSTGRES_HOST=iwtsc-postgres
+      - POSTGRES_DB=testdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - DB_MONGO_HOST=iwtsc-mongo
+      - MONGO_DB=iwtsc_data
+    ports:
+      - 8080:8080
+    depends_on:
+      - iwtsc-postgres
+      - iwtsc-mongo
+
+  iwtsc-frontend:
+    build: ./front_end
+    container_name: iwtsc-frontend
+    ports:
+      - 3000:3000
+    depends_on:
+      - iwtsc-server
+
+#named volumes that keeps our data alive after restart
+volumes:
+  iwtsc-postgres-data:
+  iwtsc-mongo-data:
